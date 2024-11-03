@@ -12,9 +12,10 @@ const adminRoute = require("./route/adminRoute")
 const app = express();
 const port = 3000;
 
+console.log(" port ",process.env.CORS_ORIGIN)
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN, 
+    origin: process.env.CORS_ORIGIN || "*", 
     credentials: true 
 }));
 
